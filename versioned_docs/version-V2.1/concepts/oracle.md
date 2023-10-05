@@ -21,7 +21,7 @@ Using cumulative values allow us to take the **time-weighted average values**.
 
 Samples are stored in a 16-bit circular array. However, by default, the oracle array only stores 2 samples, but it can be extended by anyone by calling `increaseOracleLength`. This is to shift the burden of gas cost to the oracle user.
 
-Each sample consists of three values: cumulative bin ID, cumulative volatility accumulated and cumultive bins crossed.
+Each sample consists of three values: cumulative bin ID, cumulative volatility accumulated and cumulative bins crossed.
 
 Samples are updated at the end of each swap.
 

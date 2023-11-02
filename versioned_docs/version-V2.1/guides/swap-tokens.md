@@ -67,7 +67,7 @@ path.versions = versions;
 path.tokenPath = tokenPath;
 
 (, uint128 amountOut, ) = router.getSwapOut(pair, amountIn, true);
-uint256 amountOutWithSlippage = amountOut * 99 / 100 // We allow for 1% slippage
+uint256 amountOutWithSlippage = amountOut * 99 / 100; // We allow for 1% slippage
 uint256 amountOutReal = router.swapExactTokensForTokens(amountIn, amountOutWithSlippage, path, to, block.timestamp + 1);
 ```
 
@@ -92,7 +92,7 @@ path.versions = versions;
 path.tokenPath = tokenPath;
 
 (, uint256 amountOut, ) = router.getSwapOut(pairWavax, amountIn, false);
-uint256 amountOutWithSlippage = amountOut * 99 / 100 // We allow for 1% slippage
+uint256 amountOutWithSlippage = amountOut * 99 / 100; // We allow for 1% slippage
 uint256 amountOutReal = router.swapExactNATIVEForTokens{value: amountIn}(amountOutWithSlippage, path, to, block.timestamp + 1);
 ```
 
